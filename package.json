@@ -4,11 +4,12 @@
   "name": "portfolio",
   "packageManager": "yarn@3.2.1",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "node": ">=16"
   },
   "scripts": {
+    "build": "webpack --config webpack.js",
     "develop": "webpack serve --config webpack.js",
     "lint": "eslint src/**/*.{ts,tsx}"
   },

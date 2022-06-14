@@ -30,7 +30,6 @@
         "pathGroupsExcludedImportTypes": ["builtin"],
         "pathGroups": [
           { "pattern": "react", "group": "builtin" },
-          { "pattern": "@src/**", "group": "internal", "position": "before" },
           { "pattern": "../**", "group": "internal", "position": "after" },
           { "pattern": "./**", "group": "internal", "position": "after" }
         ],

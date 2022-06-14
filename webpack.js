@@ -1,9 +1,10 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const path = require("path")
-const webpack = require("webpack")
 
 module.exports = {
+  devtool: "inline-source-map",
   entry: "./src/index.tsx",
+  mode: "development",
   devServer: {
     client: {
       overlay: {
@@ -14,13 +15,6 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     port: 8080,
-  },
-  devtool: "inline-source-map",
-  mode: "development",
-  resolve: {
-    alias: {
-      "@src": path.resolve(__dirname, "src/"),
-    },
   },
   module: {
     rules: [
@@ -39,15 +33,15 @@ module.exports = {
     clean: true,
     filename: "bundle.js",
   },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
     }),
-    new webpack.ProvidePlugin({
-      process: "process/browser.js",
-    }),
   ],
+  resolve: {
+    alias: {
+      "@src": path.resolve(__dirname, "src/"),
+    },
+    extensions: [".tsx", ".ts", ".js"],
+  },
 }
