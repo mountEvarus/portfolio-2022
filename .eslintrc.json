@@ -1,0 +1,65 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [],
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": ["**/*.*.js", "**/*.js"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "no-console": "error",
+    "require-await": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc" },
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "pathGroups": [
+          { "pattern": "react", "group": "builtin" },
+          { "pattern": "@src/**", "group": "internal", "position": "before" },
+          { "pattern": "../**", "group": "internal", "position": "after" },
+          { "pattern": "./**", "group": "internal", "position": "after" }
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": false,
+        "semi": false,
+        "tabWidth": 2,
+        "trailingComma": "es5",
+        "printWidth": 99
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/internal-regex": ["@src"],
+    "import/resolver": {
+      "typescript": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  }
+}
