@@ -1,8 +1,11 @@
 import * as React from "react"
 
 import { ColorMode } from "@src/common"
+import { useLocalStorage } from "@src/hooks"
 
 import { ColorContext, ColorModeContext } from "./color-mode-context"
+import { useDefaultColorMode } from "./default-color-mode"
+import { LocalStorageKey } from "./local-storage-key"
 
 export function ColorModeProvider<T>(props: React.PropsWithChildren<T>): JSX.Element {
   const colorContext = useColorContext()
@@ -13,11 +16,16 @@ export function ColorModeProvider<T>(props: React.PropsWithChildren<T>): JSX.Ele
 }
 
 function useColorContext(): ColorContext {
-  const [mode, setMode] = React.useState<ColorMode>(ColorMode.Light)
-  console.log(mode)
+  const defaultColor = useDefaultColorMode()
+
+  const [mode, setMode] = React.useState<ColorMode>(defaultColor)
+  const { setLocalStorage } = useLocalStorage()
 
   function toggleColorMode(): void {
-    setMode((previous) => (previous === ColorMode.Light ? ColorMode.Dark : ColorMode.Light))
+    const newColorMode = mode === ColorMode.Light ? ColorMode.Dark : ColorMode.Light
+
+    setMode(newColorMode)
+    setLocalStorage(LocalStorageKey, newColorMode)
   }
 
   return {

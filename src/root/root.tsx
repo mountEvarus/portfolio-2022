@@ -1,9 +1,9 @@
 import * as React from "react"
 
-import { faSun } from "@fortawesome/free-solid-svg-icons"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Box, CssBaseline, ThemeProvider } from "@mui/material"
-import { FlexSpacer } from "@src/common"
+import { ColorMode, FlexSpacer } from "@src/common"
 import { useYear } from "@src/hooks"
 import { useColorContext } from "@src/providers"
 import { useDefaultTheme } from "@src/theme"
@@ -15,6 +15,7 @@ export function Root(): JSX.Element {
   const { mode, toggleColorMode } = useColorContext()
   const theme = useDefaultTheme(mode)
   const year = useYear()
+  const modeIcon = mode === ColorMode.Dark ? faMoon : faSun
 
   return (
     <ThemeProvider theme={theme}>
@@ -38,11 +39,8 @@ export function Root(): JSX.Element {
               justifyContent: "space-between",
               width: "450px",
               a: {
-                color: "black",
+                color: "inherit",
                 textDecoration: "none",
-                "&:hover": {
-                  color: "blue",
-                },
               },
             }}
           >
@@ -54,7 +52,7 @@ export function Root(): JSX.Element {
           </Box>
           <FlexSpacer />
           <FontAwesomeIcon
-            icon={faSun}
+            icon={modeIcon}
             onClick={toggleColorMode}
             style={{ height: "40px", width: "40px" }}
           />
