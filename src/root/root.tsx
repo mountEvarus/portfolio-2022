@@ -14,19 +14,37 @@ export function Root(): JSX.Element {
       <Box
         component="header"
         sx={{
+          backgroundColor: "red",
+          p: "16px 24px",
           display: "flex",
-          m: "32px 24px",
-          alignItems: "center",
-          justifyContent: "space-between",
+          gridTemplateColumns: "1fr 1fr 1fr",
         }}
       >
-        {/* logo */}
-        <Link to={Path.Home}>Home</Link>
-        <Link to={Path.About}>About</Link>
-        <Link to={Path.Skills}>Skills</Link>
-        <Link to={Path.Projects}>Projects</Link>
-        <Link to={Path.Contact}>Contact</Link>
-        {/* dark/light mode */}
+        <div style={{ height: "50px", width: "50px", backgroundColor: "black" }} />
+        <div style={{ flex: "1" }} />
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "450px",
+            a: {
+              color: "black",
+              textDecoration: "none",
+              "&:hover": {
+                color: "blue",
+              },
+            },
+          }}
+        >
+          <Link to={Path.Home}>Home</Link>
+          <Link to={Path.About}>About</Link>
+          <Link to={Path.Skills}>Skills</Link>
+          <Link to={Path.Projects}>Projects</Link>
+          <Link to={Path.Contact}>Contact</Link>
+        </Box>
+        <div style={{ flex: "1" }} />
+        <div style={{ height: "50px", width: "50px", backgroundColor: "black" }} />
       </Box>
       <Box component="main" sx={{ height: "100%" }}>
         <Routes>
@@ -40,10 +58,11 @@ export function Root(): JSX.Element {
       <Box
         component="footer"
         sx={{
+          backgroundColor: "red",
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",
-          m: "24px 16px",
+          p: "12px 16px",
         }}
       >
         © Evan Hynes, {year}
