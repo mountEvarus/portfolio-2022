@@ -1,20 +1,17 @@
 import * as React from "react"
 
-import { CssBaseline, ThemeProvider } from "@mui/material"
+import { ColorModeProvider } from "@src/providers"
 import { Root } from "@src/root"
 import { BrowserRouter } from "react-router-dom"
-
-import { theme } from "./theme"
 
 export function App(): JSX.Element {
   return (
     <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+      <ColorModeProvider>
         <BrowserRouter>
           <Root />
         </BrowserRouter>
-      </ThemeProvider>
+      </ColorModeProvider>
     </React.StrictMode>
   )
 }
