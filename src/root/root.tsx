@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { faSun } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Box } from "@mui/material"
 import { useYear } from "@src/hooks"
 import { Route, Routes, Link } from "react-router-dom"
@@ -17,7 +19,7 @@ export function Root(): JSX.Element {
           backgroundColor: "red",
           p: "16px 24px",
           display: "flex",
-          gridTemplateColumns: "1fr 1fr 1fr",
+          alignItems: "center",
         }}
       >
         <div style={{ height: "50px", width: "50px", backgroundColor: "black" }} />
@@ -44,7 +46,7 @@ export function Root(): JSX.Element {
           <Link to={Path.Contact}>Contact</Link>
         </Box>
         <div style={{ flex: "1" }} />
-        <div style={{ height: "50px", width: "50px", backgroundColor: "black" }} />
+        <FontAwesomeIcon icon={faSun} style={{ height: "40px", width: "40px" }} />
       </Box>
       <Box component="main" sx={{ height: "100%" }}>
         <Routes>
