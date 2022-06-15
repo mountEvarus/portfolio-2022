@@ -1,13 +1,13 @@
-import * as React from "react"
-
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Box, CssBaseline, ThemeProvider } from "@mui/material"
+import * as React from "react"
+import { Link, Route, Routes } from "react-router-dom"
+
 import { ColorMode, FlexSpacer } from "@src/common"
 import { useYear } from "@src/hooks"
 import { useColorContext } from "@src/providers"
 import { useDefaultTheme } from "@src/theme"
-import { Route, Routes, Link } from "react-router-dom"
 
 import { Path } from "./path"
 

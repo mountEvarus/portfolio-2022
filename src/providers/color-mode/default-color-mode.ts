@@ -8,7 +8,9 @@ export function useDefaultColorMode(): ColorMode {
 
   const localStorageValue = getLocalStorage(LocalStorageKey) ?? ""
 
-  const isValidColorMode = Object.values(ColorMode).includes(localStorageValue as ColorMode)
+  const isValidColorMode = Object
+    .values(ColorMode)
+    .includes(localStorageValue as ColorMode)
 
   if (isValidColorMode) {
     return localStorageValue as ColorMode

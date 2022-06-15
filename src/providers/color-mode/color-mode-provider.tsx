@@ -22,7 +22,9 @@ function useColorContext(): ColorContext {
   const { setLocalStorage } = useLocalStorage()
 
   function toggleColorMode(): void {
-    const newColorMode = mode === ColorMode.Light ? ColorMode.Dark : ColorMode.Light
+    const newColorMode = mode === ColorMode.Light
+      ? ColorMode.Dark
+      : ColorMode.Light
 
     setMode(newColorMode)
     setLocalStorage(LocalStorageKey, newColorMode)
