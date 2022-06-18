@@ -1,8 +1,8 @@
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Box, CssBaseline, ThemeProvider } from "@mui/material"
+import { Box, CssBaseline, Link ,ThemeProvider} from "@mui/material"
 import * as React from "react"
-import { Link, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 
 import { ColorMode, FlexSpacer } from "@src/common"
 import { useYear } from "@src/hooks"
@@ -13,7 +13,7 @@ import { Path } from "./path"
 
 export function Root(): JSX.Element {
   const { mode, toggleColorMode } = useColorContext()
-  const theme = useDefaultTheme(mode)
+  const theme = React.useMemo(() => useDefaultTheme(mode), [mode])
   const year = useYear()
   const modeIcon = mode === ColorMode.Dark ? faMoon : faSun
 
@@ -39,16 +39,15 @@ export function Root(): JSX.Element {
               justifyContent: "space-between",
               width: "450px",
               a: {
-                color: "inherit",
                 textDecoration: "none",
               },
             }}
           >
-            <Link to={Path.Home}>Home</Link>
-            <Link to={Path.About}>About</Link>
-            <Link to={Path.Skills}>Skills</Link>
-            <Link to={Path.Projects}>Projects</Link>
-            <Link to={Path.Contact}>Contact</Link>
+            <Link href={Path.Home}>Home</Link>
+            <Link href={Path.About}>About</Link>
+            <Link href={Path.Skills}>Skills</Link>
+            <Link href={Path.Projects}>Projects</Link>
+            <Link href={Path.Contact}>Contact</Link>
           </Box>
           <FlexSpacer />
           <FontAwesomeIcon
