@@ -20,10 +20,12 @@ parserOptions:
   project: "./tsconfig.json"
 settings:
   import/parsers:
-    "@typescript-eslint/parser": [".ts"]
+    "@typescript-eslint/parser": [".ts", ".tsx"]
   import/resolver:
     typescript:
       project: ["./tsconfig.json"]
+  react:
+    version: detect
 rules:
   eol-last:
     - warn
@@ -70,3 +72,10 @@ rules:
           group: parent
         - pattern: "./**"
           group: sibling
+    prettier/prettier: 
+      - warn
+        singleQuote: false,
+        semi: false,
+        tabWidth: 2,
+        trailingComma: "es5",
+        printWidth: 99
