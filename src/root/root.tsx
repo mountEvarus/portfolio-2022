@@ -1,4 +1,4 @@
-import { Box, CssBaseline, ThemeProvider} from "@mui/material"
+import { Box, CssBaseline, ThemeProvider } from "@mui/material"
 import * as React from "react"
 import { Route, Routes } from "react-router-dom"
 
@@ -10,7 +10,7 @@ import { useDefaultTheme } from "@src/theme"
 import { Path } from "./path"
 
 export function Root(): JSX.Element {
-  const { mode,  } = useColorContext()
+  const { mode } = useColorContext()
   const theme = React.useMemo(() => useDefaultTheme(mode), [mode])
   const year = useYear()
 
@@ -18,7 +18,7 @@ export function Root(): JSX.Element {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-        <Header/>
+        <Header />
         <Box component="main" sx={{ height: "100%" }}>
           <Routes>
             <Route path={Path.Home} element={<p>Home page</p>} />

@@ -12,8 +12,8 @@ type HeaderStyles = {
 export function useStyles(): HeaderStyles {
   return {
     colorModeIconStyles: {
-      height: "40px", 
-      width: "40px"
+      height: "40px",
+      width: "40px",
     },
     linkBoxStyles: {
       display: "flex",
@@ -26,7 +26,7 @@ export function useStyles(): HeaderStyles {
     },
     logoPlaceholderStyles: {
       height: "50px",
-      width: "50px", 
+      width: "50px",
       backgroundColor: "black",
     },
     outerBoxStyles: {
