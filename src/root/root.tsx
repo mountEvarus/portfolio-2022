@@ -2,8 +2,7 @@ import { Box, CssBaseline, ThemeProvider } from "@mui/material"
 import * as React from "react"
 import { Route, Routes } from "react-router-dom"
 
-import { Header } from "@src/common"
-import { useYear } from "@src/hooks"
+import { Footer, Header } from "@src/common"
 import { useColorContext } from "@src/providers"
 import { useDefaultTheme } from "@src/theme"
 
@@ -12,7 +11,6 @@ import { Path } from "./path"
 export function Root(): JSX.Element {
   const { mode } = useColorContext()
   const theme = React.useMemo(() => useDefaultTheme(mode), [mode])
-  const year = useYear()
 
   return (
     <ThemeProvider theme={theme}>
@@ -28,18 +26,7 @@ export function Root(): JSX.Element {
             <Route path={Path.Contact} element={<p>Contact page</p>} />
           </Routes>
         </Box>
-        <Box
-          component="footer"
-          sx={{
-            backgroundColor: "red",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            p: "12px 16px",
-          }}
-        >
-          © Evan Hynes, {year}
-        </Box>
+        <Footer/>
       </Box>
     </ThemeProvider>
   )
