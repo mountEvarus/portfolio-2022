@@ -5,34 +5,24 @@ import * as React from "react"
 
 import { ColorMode, FlexSpacer } from "@src/common"
 import { useColorContext } from "@src/providers"
-import {Path} from "@src/root"
+import { Path } from "@src/root"
+
+import { useStyles } from "./header.styles"
 
 export function Header(): JSX.Element {
   const { mode, toggleColorMode } = useColorContext()
   const modeIcon = mode === ColorMode.Dark ? faMoon : faSun
+  const { 
+    colorModeIconStyles,
+    linkBoxStyles,
+    logoPlaceholderStyles,
+    outerBoxStyles,
+  } = useStyles()
 
-  return <Box
-    component="header"
-    sx={{
-      backgroundColor: "red",
-      p: "16px 24px",
-      display: "flex",
-      alignItems: "center",
-    }}
-  >
-    <div style={{ height: "50px", width: "50px", backgroundColor: "black" }} />
+  return <Box component="header" sx={outerBoxStyles}>
+    <div style={logoPlaceholderStyles} />
     <FlexSpacer />
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "450px",
-        a: {
-          textDecoration: "none",
-        },
-      }}
-    >
+    <Box sx={linkBoxStyles}>
       <Link href={Path.Home}>Home</Link>
       <Link href={Path.About}>About</Link>
       <Link href={Path.Skills}>Skills</Link>
@@ -43,7 +33,7 @@ export function Header(): JSX.Element {
     <FontAwesomeIcon
       icon={modeIcon}
       onClick={toggleColorMode}
-      style={{ height: "40px", width: "40px" }}
+      style={colorModeIconStyles}
     />
   </Box>
 }
