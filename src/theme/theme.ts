@@ -2,7 +2,7 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles"
 
 import { ColorMode } from "@src/common"
 
-export function useDefaultTheme(mode: ColorMode) {
+export function getDefaultTheme(mode: ColorMode) {
   return responsiveFontSizes(
     createTheme({
       palette: {
@@ -22,7 +22,7 @@ const LightPalette = {
     primary: "rgba(51, 51, 51, 0.8)",
   },
   background: {
-    default: "rgba(250, 250, 250, 0.8)"
+    default: "rgba(250, 250, 250, 0.9)"
   },
 }
 
@@ -35,6 +35,6 @@ const DarkPalette = {
     primary: "rgba(255, 248, 225, 0.8)",
   },
   background: {
-    default: "rgba(0, 0, 0, 0.8)"
+    default: "rgba(0, 0, 0, 0.9)"
   },
 }

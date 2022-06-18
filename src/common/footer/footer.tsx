@@ -3,20 +3,15 @@ import * as React from "react"
 
 import { useYear } from "@src/hooks"
 
+import { useStyles } from "./footer.styles"
+
 export function Footer(): JSX.Element {
   const year = useYear()
+  const styles = useStyles()
 
-  return (<Box
-    component="footer"
-    sx={{
-      backgroundColor: "red",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-end",
-      p: "12px 16px",
-    }}
-  >
-    © Evan Hynes, {year}
-  </Box>
+  return (
+    <Box component="footer" sx={styles}>
+      © Evan Hynes, {year}
+    </Box>
   )
 }

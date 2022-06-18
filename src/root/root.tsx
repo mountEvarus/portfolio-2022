@@ -4,13 +4,13 @@ import { Route, Routes } from "react-router-dom"
 
 import { Footer, Header } from "@src/common"
 import { useColorContext } from "@src/providers"
-import { useDefaultTheme } from "@src/theme"
+import { getDefaultTheme } from "@src/theme"
 
 import { Path } from "./path"
 
 export function Root(): JSX.Element {
   const { mode } = useColorContext()
-  const theme = React.useMemo(() => useDefaultTheme(mode), [mode])
+  const theme = React.useMemo(() => getDefaultTheme(mode), [mode])
 
   return (
     <ThemeProvider theme={theme}>
