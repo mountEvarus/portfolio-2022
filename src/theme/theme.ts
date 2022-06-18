@@ -15,12 +15,26 @@ export function useDefaultTheme(mode: ColorMode) {
 
 const LightPalette = {
   primary: {
-    main: "#a83232",
+    main: "rgba(51, 51, 51, 0.8)",
+    light: "rgba(51, 51, 51, 0.4)"
+  },
+  text: {
+    primary: "rgba(51, 51, 51, 0.8)",
+  },
+  background: {
+    default: "rgba(250, 250, 250, 0.8)"
   },
 }
 
 const DarkPalette = {
   primary: {
-    main: "#324ca8",
+    main: "rgba(255, 248, 225, 0.8)",
+    light: "rgba(255, 248, 225, 0.4)",
+  },
+  text: {
+    primary: "rgba(255, 248, 225, 0.8)",
+  },
+  background: {
+    default: "rgba(0, 0, 0, 0.8)"
   },
 }

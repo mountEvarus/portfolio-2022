@@ -1,4 +1,4 @@
-import { Theme } from "@mui/material"
+import { Theme, useTheme } from "@mui/material"
 import { SxProps } from "@mui/system"
 import * as React from "react"
 
@@ -10,6 +10,8 @@ type HeaderStyles = {
 }
 
 export function useStyles(): HeaderStyles {
+  const theme = useTheme()
+
   return {
     colorModeIconStyles: {
       height: "40px",
@@ -30,7 +32,7 @@ export function useStyles(): HeaderStyles {
       backgroundColor: "black",
     },
     outerBoxStyles: {
-      backgroundColor: "red",
+      backgroundColor: theme.palette.primary.light,
       p: "16px 24px",
       display: "flex",
       alignItems: "center",
