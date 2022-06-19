@@ -4,7 +4,7 @@
   "name": "portfolio",
   "packageManager": "yarn@3.2.1",
   "private": true,
-  "version": "0.6.8",
+  "version": "0.6.9",
   "engines": {
     "node": ">=16"
   },
@@ -12,6 +12,13 @@
     "build": "webpack --config webpack.js",
     "develop": "webpack serve --config webpack.js",
     "lint": "eslint src/**/*.{ts,tsx}"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.1.2",

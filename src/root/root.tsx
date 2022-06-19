@@ -1,5 +1,6 @@
-import { Box, CssBaseline, ThemeProvider } from "@mui/material"
 import * as React from "react"
+
+import { Box, CssBaseline, ThemeProvider } from "@mui/material"
 import { Route, Routes } from "react-router-dom"
 
 import { Footer, Header } from "@src/common"
@@ -26,7 +27,7 @@ export function Root(): JSX.Element {
             <Route path={Path.Contact} element={<p>Contact page</p>} />
           </Routes>
         </Box>
-        <Footer/>
+        <Footer />
       </Box>
     </ThemeProvider>
   )

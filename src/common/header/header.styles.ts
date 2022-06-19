@@ -1,6 +1,7 @@
+import * as React from "react"
+
 import { Theme, useTheme } from "@mui/material"
 import { SxProps } from "@mui/system"
-import * as React from "react"
 
 type HeaderStyles = {
   colorModeIconStyles: React.CSSProperties

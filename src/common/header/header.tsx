@@ -1,7 +1,8 @@
+import * as React from "react"
+
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Box, Link } from "@mui/material"
-import * as React from "react"
 
 import { ColorMode, FlexSpacer } from "@src/common"
 import { useColorContext } from "@src/providers"
