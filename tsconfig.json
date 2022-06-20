@@ -12,5 +12,5 @@
       "@src*": ["src*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts","src/**/*.tsx"]
+  "include": ["src/types/global.d.ts", "src/**/*.ts", "src/**/*.tsx"]
 }

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 import { useYear } from "@src/hooks"
 
@@ -12,7 +12,7 @@ export function Footer(): JSX.Element {
 
   return (
     <Box component="footer" sx={styles}>
-      © Evan Hynes, {year}
+      <Typography>© Evan Hynes, {year}</Typography>
     </Box>
   )
 }

@@ -1,32 +1,25 @@
 import * as React from "react"
 
 import { Box, CssBaseline, ThemeProvider } from "@mui/material"
-import { Route, Routes } from "react-router-dom"
 
 import { Footer, Header } from "@src/common"
+import { Main } from "@src/main"
 import { useColorContext } from "@src/providers"
 import { getDefaultTheme } from "@src/theme"
 
-import { Path } from "./path"
+import { useStyles } from "./root.styles"
 
 export function Root(): JSX.Element {
   const { mode } = useColorContext()
+  const styles = useStyles()
   const theme = React.useMemo(() => getDefaultTheme(mode), [mode])
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <Box sx={styles}>
         <Header />
-        <Box component="main" sx={{ height: "100%" }}>
-          <Routes>
-            <Route path={Path.Home} element={<p>Home page</p>} />
-            <Route path={Path.About} element={<p>About page</p>} />
-            <Route path={Path.Skills} element={<p>Skills page</p>} />
-            <Route path={Path.Projects} element={<p>Projects page</p>} />
-            <Route path={Path.Contact} element={<p>Contact page</p>} />
-          </Routes>
-        </Box>
+        <Main />
         <Footer />
       </Box>
     </ThemeProvider>

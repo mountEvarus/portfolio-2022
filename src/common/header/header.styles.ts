@@ -3,6 +3,8 @@ import * as React from "react"
 import { Theme, useTheme } from "@mui/material"
 import { SxProps } from "@mui/system"
 
+import { useBackgroundColor } from "@src/hooks"
+
 type HeaderStyles = {
   colorModeIconStyles: React.CSSProperties
   linkBoxStyles: SxProps<Theme>
@@ -11,6 +13,7 @@ type HeaderStyles = {
 }
 
 export function useStyles(): HeaderStyles {
+  const backgroundColor = useBackgroundColor()
   const theme = useTheme()
 
   return {
@@ -19,24 +22,28 @@ export function useStyles(): HeaderStyles {
       width: "40px",
     },
     linkBoxStyles: {
-      display: "flex",
       alignItems: "center",
+      display: "flex",
       justifyContent: "space-between",
-      width: "450px",
-      a: {
-        textDecoration: "none",
-      },
+      width: "600px",
     },
     logoPlaceholderStyles: {
+      backgroundColor: "black",
       height: "50px",
       width: "50px",
-      backgroundColor: "black",
     },
     outerBoxStyles: {
-      backgroundColor: theme.palette.primary.light,
-      p: "16px 24px",
-      display: "flex",
       alignItems: "center",
+      backgroundColor,
+      display: "flex",
+      p: "16px 24px",
+      transition: ".5s ease-in",
+      "*::selection": {
+        backgroundColor: theme.palette.marginal.main,
+      },
+      "*::-moz-selection": {
+        backgroundColor: theme.palette.marginal.main,
+      },
     },
   }
 }

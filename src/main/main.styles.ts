@@ -4,21 +4,18 @@ import { SxProps } from "@mui/system"
 import { useBackgroundColor } from "@src/hooks"
 
 export function useStyles(): SxProps<Theme> {
-  const backgroundColor = useBackgroundColor()
   const theme = useTheme()
+  const backgroundColor = useBackgroundColor()
 
   return {
-    alignItems: "center",
-    backgroundColor,
-    display: "flex",
-    justifyContent: "flex-end",
-    p: "12px 16px",
+    backgroundColor: theme.palette.background.default,
+    height: "100%",
     transition: ".5s ease-in",
     "*::selection": {
-      backgroundColor: theme.palette.marginal.main,
+      backgroundColor,
     },
     "*::-moz-selection": {
-      backgroundColor: theme.palette.marginal.main,
+      backgroundColor,
     },
   }
 }

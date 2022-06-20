@@ -6,35 +6,63 @@ export function getDefaultTheme(mode: ColorMode) {
   return responsiveFontSizes(
     createTheme({
       palette: {
-        mode,
         ...(mode === ColorMode.Light ? LightPalette : DarkPalette),
+        mode,
       },
     })
   )
 }
 
 const LightPalette = {
-  primary: {
-    main: "rgba(51, 51, 51, 0.8)",
-    light: "rgba(51, 51, 51, 0.4)",
-  },
   text: {
     primary: "rgba(51, 51, 51, 0.8)",
   },
   background: {
     default: "rgba(250, 250, 250, 0.9)",
   },
+  about: {
+    main: "rgba(74, 255, 0, 0.8)",
+  },
+  contact: {
+    main: "rgba(255, 138, 0, 0.8)",
+  },
+  home: {
+    main: "rgba(0, 255, 234, 0.8)",
+  },
+  marginal: {
+    main: "rgba(255, 255, 255, 0.5)",
+  },
+  projects: {
+    main: "rgba(191, 0, 255, 0.8)",
+  },
+  skills: {
+    main: "rgba(255, 0, 0, 0.8)",
+  },
 }
 
 const DarkPalette = {
-  primary: {
-    main: "rgba(255, 248, 225, 0.8)",
-    light: "rgba(255, 248, 225, 0.4)",
-  },
   text: {
     primary: "rgba(255, 248, 225, 0.8)",
   },
   background: {
     default: "rgba(0, 0, 0, 0.9)",
+  },
+  about: {
+    main: "rgba(37, 125, 0, 0.8)",
+  },
+  contact: {
+    main: "rgba(172, 92, 0, 0.8)",
+  },
+  home: {
+    main: "rgba(0, 130, 119, 0.8)",
+  },
+  marginal: {
+    main: "rgba(0, 0, 0, 0.5)",
+  },
+  projects: {
+    main: "rgba(94, 0, 125, 0.8)",
+  },
+  skills: {
+    main: "rgba(131, 0, 0, 0.8)",
   },
 }
