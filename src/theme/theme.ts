@@ -18,7 +18,7 @@ const LightPalette = {
     primary: "rgba(51, 51, 51, 0.8)",
   },
   background: {
-    default: "rgba(250, 250, 250, 0.9)",
+    default: "rgba(250, 250, 250, 0.7)",
   },
   about: {
     main: "rgba(74, 255, 0, 0.8)",
@@ -45,7 +45,7 @@ const DarkPalette = {
     primary: "rgba(255, 248, 225, 0.8)",
   },
   background: {
-    default: "rgba(0, 0, 0, 0.9)",
+    default: "rgba(0, 0, 0, 0.7)",
   },
   about: {
     main: "rgba(37, 125, 0, 0.8)",

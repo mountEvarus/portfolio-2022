@@ -1,13 +1,11 @@
 import * as React from "react"
 
-import { Box, useTheme } from "@mui/material"
+import { Box } from "@mui/material"
 import { Route, Routes } from "react-router-dom"
 
-import { Path } from "../root/path"
-import { useBackgroundColor } from "@src/hooks"
+import { Path } from "@src/root"
 
 import { useStyles } from "./main.styles"
-
 export function Main(): JSX.Element {
   const styles = useStyles()
 
