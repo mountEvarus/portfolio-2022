@@ -9,6 +9,12 @@ export function getDefaultTheme(mode: ColorMode) {
         ...(mode === ColorMode.Light ? LightPalette : DarkPalette),
         mode,
       },
+      typography: {
+        fontFamily: "'Poppins', sans-serif",
+        body2: {
+          fontFamily: "'Potta One', cursive",
+        },
+      },
     })
   )
 }

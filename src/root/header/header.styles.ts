@@ -24,8 +24,10 @@ export function useStyles(): HeaderStyles {
     linkBoxStyles: {
       alignItems: "center",
       display: "flex",
+      fontFamily: theme.typography.body2.fontFamily,
+      fontSize: "22px",
       justifyContent: "space-between",
-      width: "600px",
+      width: "700px",
     },
     logoStyles: {
       fill: theme.palette.text.primary,
@@ -36,7 +38,7 @@ export function useStyles(): HeaderStyles {
       alignItems: "center",
       backgroundColor,
       display: "flex",
-      p: "16px 24px",
+      p: "16px 32px",
       transition: ".5s ease-in",
       "*::selection": {
         backgroundColor: theme.palette.marginal.main,
