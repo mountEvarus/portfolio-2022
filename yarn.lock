@@ -2040,7 +2040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/webpack@npm:^6.1.2":
+"@svgr/webpack@npm:^6.2.1":
   version: 6.2.1
   resolution: "@svgr/webpack@npm:6.2.1"
   dependencies:
@@ -6332,7 +6332,7 @@ __metadata:
     "@mui/icons-material": ^5.6.2
     "@mui/material": ^5.6.4
     "@mui/system": ^5.6.4
-    "@svgr/webpack": ^6.1.2
+    "@svgr/webpack": ^6.2.1
     "@types/node": ^17.0.31
     "@types/react": ^18
     "@types/react-dom": ^17.0.0

@@ -8,7 +8,7 @@ import { useBackgroundColor } from "@src/hooks"
 type HeaderStyles = {
   colorModeIconStyles: React.CSSProperties
   linkBoxStyles: SxProps<Theme>
-  logoPlaceholderStyles: React.CSSProperties
+  logoStyles: React.CSSProperties
   outerBoxStyles: SxProps<Theme>
 }
 
@@ -27,8 +27,8 @@ export function useStyles(): HeaderStyles {
       justifyContent: "space-between",
       width: "600px",
     },
-    logoPlaceholderStyles: {
-      backgroundColor: "black",
+    logoStyles: {
+      fill: theme.palette.text.primary,
       height: "50px",
       width: "50px",
     },

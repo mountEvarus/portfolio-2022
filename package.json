@@ -4,7 +4,7 @@
   "name": "portfolio",
   "packageManager": "yarn@3.2.1",
   "private": true,
-  "version": "0.6.12",
+  "version": "0.6.13",
   "engines": {
     "node": ">=16"
   },
@@ -21,7 +21,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.1.2",
+    "@svgr/webpack": "^6.2.1",
     "@types/node": "^17.0.31",
     "@types/react": "^18",
     "@types/react-dom": "^17.0.0",
