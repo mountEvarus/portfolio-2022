@@ -27,8 +27,7 @@ export function Header(): JSX.Element {
       <FlexSpacer />
       <Box sx={linkBoxStyles}>
         <InternalLink to={Path.Home}>Home</InternalLink>
-        <InternalLink to={Path.About}>About</InternalLink>
-        <InternalLink to={Path.Skills}>Skills</InternalLink>
+        <InternalLink to={Path.Experience}>Experience</InternalLink>
         <InternalLink to={Path.Projects}>Projects</InternalLink>
         <InternalLink to={Path.Contact}>Contact</InternalLink>
       </Box>

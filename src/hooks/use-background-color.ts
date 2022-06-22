@@ -10,13 +10,11 @@ export function useBackgroundColor(): string {
   switch (page) {
     case Path.Home:
       return theme.palette.home.main
-    case Path.About:
-      return theme.palette.about.main
     case Path.Contact:
       return theme.palette.contact.main
     case Path.Projects:
       return theme.palette.projects.main
     default:
-      return theme.palette.skills.main
+      return theme.palette.experience.main
   }
 }

@@ -1,7 +1,6 @@
 export const enum Path {
-  About = "/about",
   Contact = "/contact",
+  Experience = "/experience",
   Home = "/",
   Projects = "/projects",
-  Skills = "/skils",
 }
