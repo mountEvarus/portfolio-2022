@@ -8,13 +8,11 @@ export function useBackgroundColor(): string {
   const page = usePage()
 
   switch (page) {
-    case Path.Home:
-      return theme.palette.home.main
     case Path.Contact:
       return theme.palette.contact.main
     case Path.Projects:
       return theme.palette.projects.main
     default:
-      return theme.palette.experience.main
+      return theme.palette.home.main
   }
 }

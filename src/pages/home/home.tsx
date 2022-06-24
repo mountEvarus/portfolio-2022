@@ -5,7 +5,8 @@ import { Box, Typography } from "@mui/material"
 export function Home(): JSX.Element {
   return (
     <Box>
-      <Typography>Home Page</Typography>
+      <Typography>Evan Hynes</Typography>
+      <Typography>Full Stack Software Developer</Typography>
     </Box>
   )
 }

@@ -29,9 +29,6 @@ const LightPalette = {
   contact: {
     main: "rgba(255, 138, 0, 0.8)",
   },
-  experience: {
-    main: "rgba(255, 0, 0, 0.8)",
-  },
   home: {
     main: "rgba(0, 255, 234, 0.8)",
   },
@@ -52,9 +49,6 @@ const DarkPalette = {
   },
   contact: {
     main: "rgba(172, 92, 0, 0.8)",
-  },
-  experience: {
-    main: "rgba(131, 0, 0, 0.8)",
   },
   home: {
     main: "rgba(0, 130, 119, 0.8)",
