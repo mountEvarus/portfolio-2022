@@ -13,7 +13,7 @@ export function useStyles(): SxProps<Theme> {
     display: "flex",
     justifyContent: "flex-end",
     p: "12px 16px",
-    transition: ".5s ease-in",
+    transition: "background-color .5s ease-in",
     "*::selection": {
       backgroundColor: theme.palette.marginal.main,
     },

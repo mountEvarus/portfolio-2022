@@ -5,6 +5,15 @@ import { ColorMode } from "@src/common"
 export function getDefaultTheme(mode: ColorMode) {
   return responsiveFontSizes(
     createTheme({
+      components: {
+        MuiTypography: {
+          styleOverrides: {
+            root: {
+              transition: ".5s ease-in",
+            },
+          },
+        },
+      },
       palette: {
         ...(mode === ColorMode.Light ? LightPalette : DarkPalette),
         mode,
@@ -13,6 +22,12 @@ export function getDefaultTheme(mode: ColorMode) {
         fontFamily: "'Poppins', sans-serif",
         body2: {
           fontFamily: "'Potta One', cursive",
+        },
+        h3: {
+          fontSize: "2.5rem",
+        },
+        h4: {
+          fontSize: "2rem",
         },
       },
     })

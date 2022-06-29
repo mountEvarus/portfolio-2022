@@ -19,6 +19,7 @@ export function useStyles(): HeaderStyles {
   return {
     colorModeIconStyles: {
       height: "40px",
+      transition: ".5s ease-in",
       width: "40px",
     },
     linkBoxStyles: {
@@ -32,6 +33,7 @@ export function useStyles(): HeaderStyles {
     logoStyles: {
       fill: theme.palette.text.primary,
       height: "50px",
+      transition: ".5s ease-in",
       width: "50px",
     },
     outerBoxStyles: {
@@ -39,7 +41,7 @@ export function useStyles(): HeaderStyles {
       backgroundColor,
       display: "flex",
       p: "16px 32px",
-      transition: ".5s ease-in",
+      transition: "background-color .5s ease-in",
       "*::selection": {
         backgroundColor: theme.palette.marginal.main,
       },

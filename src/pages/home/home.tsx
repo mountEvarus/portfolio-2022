@@ -1,12 +1,20 @@
 import * as React from "react"
 
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
+
+import { CareerTimeline } from "./career-timeline"
+import { Heading } from "./heading"
+import { useStyles } from "./home.styles"
+import { TechStack } from "./tech-stack"
 
 export function Home(): JSX.Element {
+  const styles = useStyles()
+
   return (
-    <Box>
-      <Typography>Evan Hynes</Typography>
-      <Typography>Full Stack Software Developer</Typography>
+    <Box sx={styles}>
+      <Heading />
+      <CareerTimeline />
+      <TechStack />
     </Box>
   )
 }

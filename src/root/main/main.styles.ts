@@ -10,7 +10,8 @@ export function useStyles(): SxProps<Theme> {
   return {
     backgroundColor: theme.palette.background.default,
     height: "100%",
-    transition: ".5s ease-in",
+    p: "64px 80px",
+    transition: "background-color .5s ease-in",
     "*::selection": {
       backgroundColor,
     },
