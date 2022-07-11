@@ -5,7 +5,7 @@ import { useBackgroundColor } from "@src/hooks"
 
 export function useStyles(): SxProps<Theme> {
   const theme = useTheme()
-  const backgroundColor = useBackgroundColor()
+  const highlightColor = useBackgroundColor()
 
   return {
     backgroundColor: theme.palette.background.default,
@@ -13,10 +13,10 @@ export function useStyles(): SxProps<Theme> {
     p: "64px 80px",
     transition: "background-color .5s ease-in",
     "*::selection": {
-      backgroundColor,
+      backgroundColor: highlightColor,
     },
     "*::-moz-selection": {
-      backgroundColor,
+      backgroundColor: highlightColor,
     },
   }
 }
