@@ -30,7 +30,7 @@ export function getDefaultTheme(mode: ColorMode) {
           fontSize: "2rem",
         },
       },
-    })
+    }),
   )
 }
 

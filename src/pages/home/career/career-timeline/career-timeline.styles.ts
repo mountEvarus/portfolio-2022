@@ -1,6 +1,8 @@
 import { Theme } from "@mui/material"
 import { SxProps } from "@mui/system"
 
+import { useScreenSizeQuery } from "@src/hooks"
+
 type CareerTimelineStyles = {
   headingStyles: SxProps<Theme>
   outerBoxStyles: SxProps<Theme>
@@ -8,15 +10,17 @@ type CareerTimelineStyles = {
 }
 
 export function useStyles(): CareerTimelineStyles {
+  const query = useScreenSizeQuery("md", "min-width")
+
   return {
     headingStyles: {
       mb: "48px",
     },
     outerBoxStyles: {
-      m: "24px",
+      m: query ? "24px" : "24px 0px",
     },
     stepperStyles: {
-      fontSize: "30px",
+      fontSize: query ? "30px" : "24px",
       transition: ".5s ease-in",
     },
   }

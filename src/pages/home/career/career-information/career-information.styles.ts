@@ -3,27 +3,20 @@ import { SxProps } from "@mui/system"
 
 import { useScreenSizeQuery } from "@src/hooks"
 
-type HeadingStyles = {
+type CareerTimelineStyles = {
   headingStyles: SxProps<Theme>
   outerBoxStyles: SxProps<Theme>
-  subHeadingStyles: SxProps<Theme>
 }
 
-export function useStyles(): HeadingStyles {
+export function useStyles(): CareerTimelineStyles {
   const query = useScreenSizeQuery("md", "min-width")
 
   return {
     headingStyles: {
-      fontSize: query ? "6rem" : "2.25rem",
+      mb: "48px",
     },
     outerBoxStyles: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "24px",
-    },
-    subHeadingStyles: {
-      fontSize: query ? "3.75rem" : "2rem",
-      pl: "40px",
+      m: query ? "24px" : "24px 0px",
     },
   }
 }

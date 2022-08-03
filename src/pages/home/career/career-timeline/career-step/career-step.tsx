@@ -1,16 +1,10 @@
 import * as React from "react"
 
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Step, StepLabel, Typography } from "@mui/material"
+import { CareerDetails } from "@src/pages/home/career"
 
-type Props = {
-  dates: string
-  icon: IconDefinition
-  step: string
-}
-
-export function CareerStep(props: Props): JSX.Element {
+export function CareerStep(props: CareerDetails): JSX.Element {
   const { dates, icon, step } = props
 
   return (
