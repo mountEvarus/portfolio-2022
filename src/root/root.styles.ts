@@ -5,6 +5,7 @@ export function useStyles(): SxProps<Theme> {
   return {
     display: "flex",
     flexDirection: "column",
-    height: "100vh",
+    minHeight: "100vh",
+    position: "relative",
   }
 }

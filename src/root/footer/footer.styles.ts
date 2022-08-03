@@ -9,11 +9,14 @@ export function useStyles(): SxProps<Theme> {
 
   return {
     alignItems: "center",
+    bottom: 0,
     backgroundColor,
     display: "flex",
     justifyContent: "flex-end",
     p: "12px 16px",
+    position: "absolute",
     transition: "background-color .5s ease-in",
+    width: "100%",
     "*::selection": {
       backgroundColor: theme.palette.marginal.main,
     },
