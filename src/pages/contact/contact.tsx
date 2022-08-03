@@ -3,6 +3,7 @@ import * as React from "react"
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons"
 import { Box, Typography } from "@mui/material"
+import { motion } from "framer-motion"
 
 import { useStyles } from "./contact.styles"
 import { IconLink } from "./icon-link"
@@ -11,7 +12,13 @@ export function Contact(): JSX.Element {
   const { linkBoxStyles, outerBoxStyles, paragraphStyles } = useStyles()
 
   return (
-    <Box sx={outerBoxStyles}>
+    <Box
+      animate={{ opacity: 1 }}
+      component={motion.div}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      sx={outerBoxStyles}
+    >
       <Typography variant="h2">Contact Information</Typography>
       <Typography sx={paragraphStyles}>If you have any questions, contact me through one of the following channels</Typography>
       <Box sx={linkBoxStyles}>

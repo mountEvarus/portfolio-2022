@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { Box } from "@mui/material"
+import { motion } from "framer-motion"
 
 import { Career } from "./career"
 import { Heading } from "./heading"
@@ -11,7 +12,13 @@ export function Home(): JSX.Element {
   const styles = useStyles()
 
   return (
-    <Box sx={styles}>
+    <Box 
+      animate={{ opacity: 1 }}
+      component={motion.div}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      sx={styles}
+    >
       <Heading />
       <Career />
       <TechStack />
