@@ -4,11 +4,13 @@ import { Theme, useTheme } from "@mui/material"
 import { SxProps } from "@mui/system"
 
 import { ColorMode } from "@src/common"
+import { useScreenSizeQuery } from "@src/hooks"
 import { useColorContext } from "@src/providers"
 
 type ProjectCardStyles = {
   descriptionTextStyles: SxProps<Theme>
   headingBoxStyles: SxProps<Theme>
+  imageStyles: React.CSSProperties
   infoIconStyles: React.CSSProperties
   linkBoxStyles: SxProps<Theme>
   outerBoxStyles: SxProps<Theme>
@@ -17,6 +19,7 @@ type ProjectCardStyles = {
 export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
   const theme = useTheme()
   const { mode } = useColorContext()
+  const query = useScreenSizeQuery("lg", "min-width")
   const descriptionTextBackgroundColor =
     mode === ColorMode.Light
       ? "rgba(255, 255, 255, 1.0)"
@@ -25,8 +28,11 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
   return {
     descriptionTextStyles: {
       backgroundColor: descriptionTextBackgroundColor,
-      height: descriptionTabOpen ? "250px" : "0",
-      overflow: "hidden",
+      height: descriptionTabOpen 
+        ? query ? "250px" : "150px" 
+        : "0",
+      overflowX: "hidden",
+      overflowY: query ? "hidden" : "scroll",
       position: "absolute",
       px: "10px",
       py: "auto",
@@ -36,6 +42,13 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
       alignItems: "center",
       display: "flex",
       gap: "16px",
+      h4: {
+        fontSize: "24px",
+      },
+    },
+    imageStyles: {
+      height: query ? "250px" : "150px",
+      width: query ? "480px" : "280px",
     },
     infoIconStyles: {
       cursor: "pointer",
@@ -43,7 +56,7 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
     linkBoxStyles: {
       alignItems: "center",
       display: "flex",
-      fontSize: "36px",
+      fontSize: query ? "36px" : "24px",
       justifyContent: "space-evenly",
       width: "250px",
       a: {
@@ -55,11 +68,11 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
       borderRadius: "10px",
       display: "flex",
       flexDirection: "column",
-      height: "500px",
+      height: query ? "500px" : "300px",
       justifyContent: "space-between",
       position: "relative",
       py: "24px",
-      width: "500px",
+      width: query ? "500px" : "300px",
     },
   }
 }

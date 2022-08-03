@@ -22,6 +22,7 @@ export function ProjectCard(props: Props): JSX.Element {
   const {
     descriptionTextStyles,
     headingBoxStyles,
+    imageStyles,
     infoIconStyles,
     linkBoxStyles,
     outerBoxStyles,
@@ -34,7 +35,7 @@ export function ProjectCard(props: Props): JSX.Element {
   return (
     <Card sx={outerBoxStyles}>
       <Typography sx={descriptionTextStyles}>{description}</Typography>
-      <img src={image} height="250px" width="480px" />
+      <img src={image} style={imageStyles} />
       <Box sx={headingBoxStyles}>
         <Typography variant="h4">{heading}</Typography>
         <FontAwesomeIcon
