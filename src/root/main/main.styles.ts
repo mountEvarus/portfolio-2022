@@ -15,7 +15,7 @@ export function useStyles(): SxProps<Theme> {
   return {
     backgroundColor: theme.palette.background.default,
     minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})`,
-    p: mediumQuery ? "64px 80px" : "24px",
+    p: mediumQuery ? "64px 80px" : "24px 24px 64px 24px",
     transition: "background-color .5s ease-in",
     "*::selection": {
       backgroundColor: highlightColor,
