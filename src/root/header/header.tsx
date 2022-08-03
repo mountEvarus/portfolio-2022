@@ -6,13 +6,15 @@ import { Box, Link } from "@mui/material"
 import Logo from "@src/assets/logo.svg"
 
 import { ColorMode, FlexSpacer, InternalLink } from "@src/common"
+import { useScreenSizeQuery } from "@src/hooks"
 import { useColorContext } from "@src/providers"
-import { Path } from "@src/root"
 
+import { HeaderLinks } from "./header-links"
 import { useStyles } from "./header.styles"
 
 export function Header(): JSX.Element {
   const { mode, toggleColorMode } = useColorContext()
+  const query = useScreenSizeQuery("sm", "min-width")
   const { colorModeIconStyles, linkBoxStyles, logoStyles, outerBoxStyles } =
     useStyles()
 
@@ -25,9 +27,18 @@ export function Header(): JSX.Element {
       </Link>
       <FlexSpacer />
       <Box sx={linkBoxStyles}>
-        <InternalLink to={Path.Home}>Home</InternalLink>
-        <InternalLink to={Path.Projects}>Projects</InternalLink>
-        <InternalLink to={Path.Contact}>Contact</InternalLink>
+        {HeaderLinks.map((link, index) => {
+          const { icon, name, path } = link
+          const content = query 
+            ? name
+            : <FontAwesomeIcon icon={icon} />
+
+          return (
+            <InternalLink key={index} to={path}>
+              {content}
+            </InternalLink>
+          )
+        })}
       </Box>
       <FlexSpacer />
       <FontAwesomeIcon
