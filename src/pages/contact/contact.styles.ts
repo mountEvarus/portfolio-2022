@@ -21,8 +21,11 @@ export function useStyles(): ContactStyles {
     },
     outerBoxStyles: {
       fontSize: query ? "64px" : "40px",
+      maxWidth: "2560px",
+      m: "auto",
     },
     paragraphStyles: {
+      fontSize: "2rem",
       my: query ? "64px" : "40px",
     },
   }

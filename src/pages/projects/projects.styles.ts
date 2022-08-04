@@ -16,7 +16,7 @@ export function useStyles(): ProjectStyles {
   return {
     outerBoxStyles: {
       alignItems: "center",
-      display: "flex", //
+      display: "flex",
       flexWrap: "wrap",
       gap: extraLargeQuery 
         ? "512px" 
@@ -27,7 +27,8 @@ export function useStyles(): ProjectStyles {
             : smallQuery
               ? "64px" : "32px",
       height: "100%",
-      justifyContent: "space-evenly", //
+      justifyContent: "space-evenly",
+      maxWidth: "2560px",
       mx: "auto",
     },
   }
