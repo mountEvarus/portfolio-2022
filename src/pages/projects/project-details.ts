@@ -1,5 +1,6 @@
 import CliUtilsImage from "@src/assets/cli-utils.png"
 import TypescriptHelpersImage from "@src/assets/typescript-helpers.png"
+import VibeplayerImage from "@src/assets/vibeplayer.png"
 
 export type ProjectDetails = {
   description: string
@@ -34,5 +35,18 @@ Music - list music files from an m3u platlist, copy files & check which ones are
     githubLink: "https://github.com/mountEvarus/cli-tools",
     heading: "CLI Utils",
     image: CliUtilsImage,
+  },
+  {
+    description: `
+This project is a browser based music visualiser.
+
+Upload any of your music files, or clone the repo and use the sample music provided.
+
+There are 3 different waveforms to pick from and with each you can change the color palette and fourier transform size (aka how many data points to use).
+    `,
+    githubLink: "https://github.com/mountEvarus/vibeplayer",
+    heading: "Vibeplayer",
+    image: VibeplayerImage,
+    siteLink: "https://vibeplayer.hynes.app/",
   },
 ]
