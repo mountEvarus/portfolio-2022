@@ -4,18 +4,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faCircleInfo, faGlobe } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Box, Card, Typography } from "@mui/material"
+import { ProjectDetails } from "@src/pages/projects"
 
 import { useStyles } from "./project-card.styles"
 
-type Props = {
-  description: string
-  githubLink: string
-  heading: string
-  image: string
-  siteLink?: string
-}
-
-export function ProjectCard(props: Props): JSX.Element {
+export function ProjectCard(props: ProjectDetails): JSX.Element {
   const { description, githubLink, heading, image, siteLink } = props
   const [descriptionTabOpen, setIsDescriptionTabOpen] = React.useState(false)
 

@@ -28,14 +28,15 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
   return {
     descriptionTextStyles: {
       backgroundColor: descriptionTextBackgroundColor,
+      boxSizing: "border-box",
       height: descriptionTabOpen 
         ? query ? "250px" : "150px" 
         : "0",
       overflowX: "hidden",
       overflowY: query ? "hidden" : "scroll",
       position: "absolute",
-      px: "10px",
-      py: "auto",
+      px: "26px",
+      py: descriptionTabOpen ? "16px" : "auto",
       transition: ".5s ease-in",
     },
     headingBoxStyles: {
