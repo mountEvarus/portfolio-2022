@@ -8,17 +8,26 @@ type ProjectStyles = {
 }
 
 export function useStyles(): ProjectStyles {
+  const extraLargeQuery = useScreenSizeQuery("xl", "min-width")
+  const largeQuery = useScreenSizeQuery("lg", "min-width")
   const mediumQuery = useScreenSizeQuery("md", "min-width")
   const smallQuery = useScreenSizeQuery("sm", "min-width")
 
   return {
     outerBoxStyles: {
       alignItems: "center",
-      display: "grid",
-      gap: mediumQuery ? "48px" : "8px",
-      gridTemplateColumns: smallQuery ? "1fr 1fr" : "1fr",
+      display: "flex", //
+      flexWrap: "wrap",
+      gap: extraLargeQuery 
+        ? "512px" 
+        : largeQuery 
+          ? "256px"
+          : mediumQuery
+            ? "128px"
+            : smallQuery
+              ? "64px" : "32px",
       height: "100%",
-      justifyItems: "center",
+      justifyContent: "space-evenly", //
       mx: "auto",
     },
   }

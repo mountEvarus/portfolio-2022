@@ -25,8 +25,6 @@ export function ProjectCard(props: ProjectDetails): JSX.Element {
     setIsDescriptionTabOpen((state) => !state)
   }
 
-  console.log(descriptionTextStyles)
-
   return (
     <Card sx={outerBoxStyles}>
       <Typography sx={descriptionTextStyles}>{description}</Typography>
