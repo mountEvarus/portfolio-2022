@@ -74,6 +74,7 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
       position: "relative",
       py: "24px",
       width: query ? "500px" : "300px",
+      whiteSpace: "pre-wrap",
     },
   }
 }
