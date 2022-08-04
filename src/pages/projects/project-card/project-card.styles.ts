@@ -60,9 +60,6 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
       fontSize: query ? "36px" : "24px",
       justifyContent: "space-evenly",
       width: "250px",
-      a: {
-        color: theme.palette.text.primary,
-      },
     },
     outerBoxStyles: {
       alignItems: "center",

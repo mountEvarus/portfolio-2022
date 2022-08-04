@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Box, Card, Typography } from "@mui/material"
 import { ProjectDetails } from "@src/pages/projects"
 
+import { IconLink } from "@src/common"
+
 import { useStyles } from "./project-card.styles"
 
 export function ProjectCard(props: ProjectDetails): JSX.Element {
@@ -38,14 +40,8 @@ export function ProjectCard(props: ProjectDetails): JSX.Element {
         />
       </Box>
       <Box sx={linkBoxStyles}>
-        <Box component="a" href={githubLink} target="_blank">
-          <FontAwesomeIcon icon={faGithub} />
-        </Box>
-        {siteLink && (
-          <Box component="a" href={siteLink} target="_blank">
-            <FontAwesomeIcon icon={faGlobe} />
-          </Box>
-        )}
+        <IconLink icon={faGithub} link={githubLink} />
+        {siteLink && <IconLink icon={faGlobe} link={siteLink} />}
       </Box>
     </Card>
   )
