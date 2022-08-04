@@ -25,7 +25,7 @@ export function useStyles(): ContactStyles {
       m: "auto",
     },
     paragraphStyles: {
-      fontSize: "2rem",
+      fontSize: query ? "2rem" : "1rem",
       my: query ? "64px" : "40px",
     },
   }
