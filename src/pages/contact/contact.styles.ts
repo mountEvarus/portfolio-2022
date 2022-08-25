@@ -10,23 +10,20 @@ type ContactStyles = {
 }
 
 export function useStyles(): ContactStyles {
-  const query = useScreenSizeQuery("sm", "min-width")
+  const query = useScreenSizeQuery("md", "min-width")
 
   return {
     linkBoxStyles: {
       alignItems: "center",
       display: "flex",
       justifyContent: "space-evenly",
-      mb: query ? "64px" : "40px",
+      mb: query ? "24px" : "32px",
     },
     outerBoxStyles: {
-      fontSize: query ? "64px" : "40px",
-      maxWidth: "2560px",
-      m: "auto",
+      fontSize: "40px",
     },
     paragraphStyles: {
-      fontSize: query ? "2rem" : "1rem",
-      my: query ? "64px" : "40px",
+      my: query ? "24px" : "32px",
     },
   }
 }
