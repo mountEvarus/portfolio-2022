@@ -22,7 +22,7 @@ export function useStyles(): ProjectStyles {
           ? "64px" : "32px",
       height: "100%",
       justifyContent: "space-evenly",
-      maxWidth: "2560px",
+      maxWidth: "2160px",    
       mx: "auto",
     },
   }

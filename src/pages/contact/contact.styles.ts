@@ -20,6 +20,8 @@ export function useStyles(): ContactStyles {
       mb: query ? "24px" : "32px",
     },
     outerBoxStyles: {
+      maxWidth: "2160px",    
+      m: "auto",
       fontSize: "40px",
     },
     paragraphStyles: {

@@ -14,8 +14,6 @@ export function useStyles(): SxProps<Theme> {
 
   return {
     backgroundColor: theme.palette.background.default,
-    maxWidth: "2160px",    
-    m: "auto",
     minHeight: `calc(100vh - ${headerHeight} - ${footerHeight})`,
     p: mediumQuery ? "64px 80px" : "24px 24px 64px 24px",
     transition: "background-color .5s ease-in",

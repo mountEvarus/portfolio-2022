@@ -26,7 +26,7 @@ export function Header(): JSX.Element {
         <Logo style={logoStyles} />
       </Link>
       <FlexSpacer />
-      <Box sx={linkBoxStyles}>
+      <Box component="nav" sx={linkBoxStyles}>
         {HeaderLinks.map((link, index) => {
           const { icon, name, path } = link
           const content = query 

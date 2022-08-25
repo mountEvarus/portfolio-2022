@@ -15,19 +15,23 @@ type HeaderStyles = {
 export function useStyles(): HeaderStyles {
   const backgroundColor = useBackgroundColor()
   const theme = useTheme()
+  const largeQuery = useScreenSizeQuery("lg", "min-width")
   const mediumQuery = useScreenSizeQuery("md", "min-width")
   const smallQuery = useScreenSizeQuery("sm", "min-width")
 
   return {
     colorModeIconStyles: {
-      height: smallQuery ? "40px" : "24px",
+      height: largeQuery 
+        ? "40px" : smallQuery 
+          ? "28px" : "24px",
       transition: ".5s ease-in",
-      width: smallQuery ? "40px" : "24px",
+      width: largeQuery 
+        ? "40px" : smallQuery 
+          ? "28px" : "24px",
     },
     linkBoxStyles: {
       alignItems: "center",
       display: "flex",
-      fontFamily: theme.typography.body2.fontFamily,
       fontSize: smallQuery ? "22px" : "24px",
       gap: mediumQuery 
         ? "220px" 
@@ -36,15 +40,20 @@ export function useStyles(): HeaderStyles {
     },
     logoStyles: {
       fill: theme.palette.text.primary,
-      height: smallQuery ? "50px" : "25px",
+      height: largeQuery 
+        ? "50px" : smallQuery 
+          ? "30px" : "25px",
       transition: ".5s ease-in",
-      width: smallQuery ? "50px" : "25px",
+      width: largeQuery
+        ? "50px" : smallQuery
+          ? "30px" : "25px",
     },
     outerBoxStyles: {
       alignItems: "center",
       backgroundColor,
       display: "flex",
-      p: "16px 32px",
+      px: "32px",
+      py: largeQuery ? "16px" : "8px",
       transition: "background-color .5s ease-in",
       a: {
         alignItems: "center",

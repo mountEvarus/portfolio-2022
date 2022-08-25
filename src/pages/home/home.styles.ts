@@ -11,7 +11,7 @@ export function useStyles(): SxProps<Theme> {
     flexDirection: "column",
     justifyContent: "space-between",
     height: "100%",
-    maxWidth: "2560px",
+    maxWidth: "2160px",    
     m: "auto",
     pb: "60px",
     pt: query ? "120px": 0,
