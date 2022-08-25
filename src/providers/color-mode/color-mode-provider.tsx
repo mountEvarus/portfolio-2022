@@ -8,7 +8,7 @@ import { useDefaultColorMode } from "./default-color-mode"
 import { LocalStorageKey } from "./local-storage-key"
 
 export function ColorModeProvider<T>(
-  props: React.PropsWithChildren<T>
+  props: React.PropsWithChildren<T>,
 ): JSX.Element {
   const colorContext = useColorContext()
 

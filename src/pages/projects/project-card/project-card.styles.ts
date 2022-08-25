@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Theme, useTheme } from "@mui/material"
+import { Theme } from "@mui/material"
 import { SxProps } from "@mui/system"
 
 import { ColorMode } from "@src/common"
@@ -17,7 +17,6 @@ type ProjectCardStyles = {
 }
 
 export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
-  const theme = useTheme()
   const { mode } = useColorContext()
   const query = useScreenSizeQuery("lg", "min-width")
   const descriptionTextBackgroundColor =
@@ -33,10 +32,12 @@ export function useStyles(descriptionTabOpen: boolean): ProjectCardStyles {
         ? query ? "250px" : "150px" 
         : "0",
       overflowX: "hidden",
-      overflowY: query ? "hidden" : "scroll",
+      overflowY: "scroll",
       position: "absolute",
       px: "26px",
-      py: descriptionTabOpen ? "16px" : "auto",
+      py: descriptionTabOpen 
+        ? query 
+          ? "8px": "auto" : "auto",
       transition: ".5s ease-in",
     },
     headingBoxStyles: {
