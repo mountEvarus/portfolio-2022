@@ -1,4 +1,5 @@
 import CliUtilsImage from "@src/assets/cli-utils.png"
+import CrateDiggersImage from "@src/assets/crate-diggers.png"
 import TypescriptHelpersImage from "@src/assets/typescript-helpers.png"
 import VibeplayerImage from "@src/assets/vibeplayer.png"
 
@@ -48,5 +49,16 @@ There are 3 different waveforms to pick from and with each you can change the co
     heading: "Vibeplayer",
     image: VibeplayerImage,
     siteLink: "https://vibeplayer.hynes.app/",
+  },
+  {
+    description: `
+Crate diggers is a site where you can query the discogs API to search for your favourite records.
+    
+Using local storage, you can favourite records to create a persistant collection of your favourite music!
+    `,
+    githubLink: "https://github.com/mountEvarus/crate-diggers",
+    heading: "Crate Diggers",
+    image: CrateDiggersImage,
+    siteLink: "https://crate-diggers.hynes.app/",
   },
 ]
