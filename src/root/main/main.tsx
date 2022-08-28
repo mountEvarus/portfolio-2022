@@ -4,7 +4,7 @@ import { Box } from "@mui/material"
 import { AnimatePresence } from "framer-motion"
 import { Route, Routes , useLocation } from "react-router-dom"
 
-import { Contact, Home, Projects } from "@src/pages"
+import { Contact, Home, NotFound, Projects } from "@src/pages"
 import { Path } from "@src/root"
 
 
@@ -20,6 +20,7 @@ export function Main(): JSX.Element {
           <Route path={Path.Home} element={<Home />} />
           <Route path={Path.Projects} element={<Projects />} />
           <Route path={Path.Contact} element={<Contact />} />
+          <Route path={Path.NotFound} element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </Box>
