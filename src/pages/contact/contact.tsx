@@ -3,6 +3,7 @@ import * as React from "react"
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons"
 import { Box, Typography } from "@mui/material"
+import PlaceholderPdf from "@src/assets/placeholder.pdf"
 import { IconLink } from "@src/common/icon-link"
 import { motion } from "framer-motion"
 
@@ -29,7 +30,7 @@ export function Contact(): JSX.Element {
       <Typography variant="h2">CV</Typography>
       <Typography sx={paragraphStyles}>Feel free to look through my CV for more information about my education, experience & skills</Typography>
       <Box sx={linkBoxStyles}>
-        <IconLink download icon={faFilePdf} link="placeholder.pdf" />
+        <IconLink download icon={faFilePdf} link={PlaceholderPdf} />
       </Box>
     </Box>
   )
