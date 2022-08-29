@@ -24,7 +24,7 @@ export function ProjectCard(props: ProjectDetails): JSX.Element {
   } = useStyles(descriptionTabOpen)
 
   function toggleDescription() {
-    setIsDescriptionTabOpen((state) => !state)
+    setIsDescriptionTabOpen((state) => state.not())
   }
 
   return (

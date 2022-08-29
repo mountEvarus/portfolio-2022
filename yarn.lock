@@ -1560,6 +1560,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@evan-abc/typescript-helpers@npm:^0.3.5":
+  version: 0.3.5
+  resolution: "@evan-abc/typescript-helpers@npm:0.3.5"
+  checksum: 246f72a3383b1db59eeb7da398a9fa0d716445070e2f2126ff8f98aeb9e8026d04fe7a821366de3ce5b9a525403114976c0b4f9ee816961477de6531c0e13887
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:6.1.1":
   version: 6.1.1
   resolution: "@fortawesome/fontawesome-common-types@npm:6.1.1"
@@ -6586,6 +6593,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
+    "@evan-abc/typescript-helpers": ^0.3.5
     "@fortawesome/fontawesome-svg-core": ^6.1.1
     "@fortawesome/free-brands-svg-icons": ^6.1.1
     "@fortawesome/free-solid-svg-icons": ^6.1.1
