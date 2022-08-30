@@ -7,10 +7,10 @@ import { CareerStep } from "./career-step"
 import { useStyles } from "./career-timeline.styles"
 
 export function CareerTimeline(): JSX.Element {
-  const { headingStyles, outerBoxStyles, stepperStyles } = useStyles()
+  const { headingStyles, stepperStyles } = useStyles()
 
   return (
-    <Box component="section" sx={outerBoxStyles}>
+    <Box component="section">
       <Typography sx={headingStyles} variant="h3">
         Professional Career:
       </Typography>

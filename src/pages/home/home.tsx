@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { Career } from "./career"
 import { Heading } from "./heading"
 import { useStyles } from "./home.styles"
+import { Intro } from "./intro"
 import { TechStack } from "./tech-stack"
 
 export function Home(): JSX.Element {
@@ -20,6 +21,7 @@ export function Home(): JSX.Element {
       sx={styles}
     >
       <Heading />
+      <Intro />
       <Career />
       <TechStack />
     </Box>

@@ -7,11 +7,11 @@ import { CareerInfoBlock } from "./career-info-block"
 import { useStyles } from "./career-information.styles"
 
 export function CareerInformation(): JSX.Element {
-  const { headingStyles, outerBoxStyles } = useStyles()
+  const styles = useStyles()
 
   return (
-    <Box component="section" sx={outerBoxStyles}>
-      <Typography sx={headingStyles} variant="h3">
+    <Box component="section">
+      <Typography sx={styles} variant="h3">
         Professional Career:
       </Typography>
       <Box>

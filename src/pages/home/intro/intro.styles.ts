@@ -4,6 +4,9 @@ import { SxProps } from "@mui/system"
 export function useStyles(): SxProps<Theme> {
 
   return {
-    mb: "48px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
+    mt: "24px",
   }
 }

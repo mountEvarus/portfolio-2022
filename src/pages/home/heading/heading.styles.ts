@@ -19,7 +19,7 @@ export function useStyles(): HeadingStyles {
     outerBoxStyles: {
       display: "flex",
       flexDirection: "column",
-      gap: "24px",
+      gap: "8px",
     },
     subHeadingStyles: {
       fontSize: query ? "3.75rem" : "2rem",
