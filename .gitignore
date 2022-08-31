@@ -8,3 +8,4 @@ dist
 !.yarn/sdks
 !.yarn/versions
 yarn-error.log
+node_modules
